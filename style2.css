@@ -1,0 +1,163 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Make the page stretch and footer stay at bottom */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation bar */
+nav {
+  display: flex;
+  justify-content: right;
+  padding: 20px 40px;
+  background-color: #252424;
+}
+
+.nav-links {
+  display: flex;
+  gap: 90px;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(238, 80, 80);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Logo below nav, left-aligned */
+.logo-container {
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Main content layout */
+header {
+  flex: 1;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-area {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.text-area h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-area h2 span {
+  color: inherit;
+}
+
+.web-desc {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Profile image */
+.profile-pic {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Achievements section */
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.achievement-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.achievement-item h3 {
+  margin-bottom: 0.5rem;
+  color: #222;
+  font-size: 1.2rem;
+}
+
+.achievement-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer pinned to bottom */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-area {
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin-top: 2rem;
+  }
+}

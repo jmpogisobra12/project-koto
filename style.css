@@ -1,0 +1,425 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout base */
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: gray;
+  color: gray;
+  overflow-x: hidden;
+}
+/* Structure for sticky footer */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.portfolio-section {
+  flex: 1;
+}
+
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Header layout */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px 40px;
+  position: relative;
+  gap: 30px;
+  background-color: white;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav Menu */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 90px;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 35px;
+  background-color: #252424;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: rgb(238, 80, 80);
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Main content */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex: 1;
+  padding: 20px 0;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  gap: 25px;
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+  color: black;
+  font-size: 25px;
+}
+
+.intro-text h2 {
+  font-size: 70px;
+  margin: 0;
+  color: black;
+}
+
+.intro-text span {
+  color: red;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 40px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.hire {
+  background-color: #e53935;
+  color: white;
+  font-size: 30px;
+}
+
+.hire:hover {
+  background-color: darkred;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+
+.about:hover {
+  background-color: #333;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials img {
+  width: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 5px solid rgb(241, 26, 62);
+  object-fit: cover;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(241, 26, 62, 0.6);
+}
+
+/* ======================
+   RESPONSIVE MEDIA QUERIES
+   ====================== */
+
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 40px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .logo {
+    width: 120px;
+    top: 15px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+  }
+
+  .intro-text h2 {
+    font-size: 32px;
+  }
+
+  nav {
+    font-size: 18px;
+  }
+
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 20px;
+    top: 15px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h2 {
+    font-size: 26px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  nav {
+    flex-direction: column;
+    font-size: 16px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 80px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 60px 30px;
+  background-color: white;
+  text-align: center;
+  color: black;
+}
+
+/* Heading Style */
+.portfolio-heading {
+  font-size: 70px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Project Container */
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px 0;
+}
+
+/* Project Card */
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  margin: 10px 0;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Optional View Button (if used) */
+.view-btn {
+  background-color: rgb(253, 0, 0);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #f34141;
+  transform: scale(1.05);
+}
+
+/* ======================
+   RESPONSIVE MEDIA QUERIES (for Portfolio) 
+   ====================== */
+@media (max-width: 1024px) {
+  .portfolio-heading {
+    font-size: 50px;
+  }
+
+  .project-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-heading {
+    font-size: 40px;
+  }
+
+  .project-card h3 {
+    font-size: 24px;
+  }
+
+  .project-card p {
+    font-size: 16px;
+  }
+
+  .view-btn {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-heading {
+    font-size: 32px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+

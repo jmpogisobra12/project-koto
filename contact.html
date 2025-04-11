@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - JM Borreros</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-section {
+      min-height: 100vh;
+      background-color: white;
+      padding: 60px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-box {
+      background: #f2f2f2;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .contact-box h1 {
+      font-size: 50px;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      font-size: 1.1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #e53935;
+      box-shadow: 0 0 6px rgba(229, 57, 53, 0.3);
+      outline: none;
+    }
+
+    .contact-form button {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: darkred;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .contact-box {
+        padding: 30px 20px;
+      }
+
+      .contact-box h1 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-box h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="skills.html" class="active">Skills</a>
+
+  </nav>
+
+  <section class="contact-section">
+    <div class="contact-box">
+      <h1>Contact Me</h1>
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 JM Borreros. All rights reserved.
+  </footer>
+
+</body>
+</html>
